@@ -19,11 +19,6 @@ pipeline {
                 echo "test has successfully!"
             }
         }
-        stage('test') {
-            steps {
-                echo "test has successfully!"
-            }
-        }
         stage('deploy') {
             steps {
                 sh 'docker run -d --name react_d -p 8001:8001 first:latest '
